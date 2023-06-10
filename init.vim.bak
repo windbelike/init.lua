@@ -1,0 +1,81 @@
+call plug#begin()
+
+Plug 'ThePrimeagen/vim-be-good'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+" go-lsp
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+" go-auto-complete
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+call plug#end()
+
+" <Leader> & <LocalLeader> mapping
+let mapleader = " "
+" let maplocalleader = "\\"
+
+" paste on vision mode without losing register
+vnoremap <leader>p "_dP
+nnoremap <leader>d dd
+nnoremap <leader>pv :Ex<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :so $MYVIMRC<cr>
+
+" number styles
+set number
+set relativenumber
+
+" normal mapping
+nnoremap <C-D> <C-D>zz
+nnoremap <C-U> <C-U>zz
+
+" insert mapping
+inoremap <C-U> <esc>viwU<esc>
+
+" highlighting yanked content
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}
+
+
+
+" print a friendly message
+echo ">^.^< 😈"
+
+" remove netrw banner
+let g:netrw_banner = 0
+
+" netrw line number
+" let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+
+" round shiftwidth
+set sr
+" shiftwidth, sw
+set shiftwidth=4
+" tab size
+set tabstop=4
+
+set autoindent
+
+" nonrecursive mapping
+" nnoremap
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+set ignorecase
+set nowrap
+
+" go-lsp
+augroup LspGo
+  au!
+  autocmd User lsp_setup call lsp#register_server({
+      \ 'name': 'go-lang',
+      \ 'cmd': {server_info->['gopls']},
+      \ 'whitelist': ['go'],
+      \ })
+  autocmd FileType go setlocal omnifunc=lsp#complete
+  "autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+  "autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+  "autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+augroup END
