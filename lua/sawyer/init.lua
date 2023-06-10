@@ -1,2 +1,2 @@
 require("sawyer.remap")
-print("hello from sawyer")
+require("sawyer.set")
