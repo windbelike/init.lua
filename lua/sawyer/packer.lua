@@ -50,4 +50,8 @@ return require('packer').startup(function(use)
 	  }
   }
 
+  -- Git Helpler
+  use("tpope/vim-fugitive")
+
+
 end)
