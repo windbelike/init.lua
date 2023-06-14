@@ -53,5 +53,7 @@ return require('packer').startup(function(use)
   -- Git Helpler
   use("tpope/vim-fugitive")
 
+  -- VimBeGood
+  use('ThePrimeagen/vim-be-good')
 
 end)
