@@ -14,3 +14,9 @@ vim.keymap.set("n", "q", "<nop>")
 
 -- go format
 vim.keymap.set("n", "<leader>gfm", ": !go fmt % <CR>")
+
+-- Esc
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- ignore leader d
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
