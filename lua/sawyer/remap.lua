@@ -9,14 +9,17 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
-vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "q", "<nop>")
+vim.keymap.set({"n", "v"}, "Q", "<nop>")
+vim.keymap.set({"n", "v"}, "q", "<nop>")
 
 -- go format
 vim.keymap.set("n", "<leader>gfm", ": !go fmt % <CR>")
 
 -- Esc
-vim.keymap.set("i", "<C-c>", "<Esc>")
+-- vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- ignore leader d
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+
+vim.keymap.set("i", "jk", "<Esc>")
+
