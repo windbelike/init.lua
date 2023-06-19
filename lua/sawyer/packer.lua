@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 
   -- Treesitter
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use("nvim-treesitter/nvim-treesitter-context");
 
   -- Harpoon
   use('theprimeagen/harpoon')
@@ -63,5 +64,8 @@ return require('packer').startup(function(use)
           require('Comment').setup()
       end
   }
+
+  -- Auto-Pair
+  e("jiangmiao/auto-pairs")
 
 end)
