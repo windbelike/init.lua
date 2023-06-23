@@ -18,8 +18,15 @@ vim.keymap.set("n", "<leader>gfm", ": !go fmt % <CR>")
 -- Esc
 -- vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- ignore leader d
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+-- ignore 
+vim.keymap.set({"n", "v"}, "<leader>d", "<nop>")
+vim.keymap.set({"n", "v"}, "<leader>p", "<nop>")
 
 vim.keymap.set("i", "jk", "<Esc>")
+
+
+
+
+
+
 
