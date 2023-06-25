@@ -12,6 +12,8 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({"n", "v"}, "Q", "<nop>")
 vim.keymap.set({"n", "v"}, "q", "<nop>")
 
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+
 -- go format
 vim.keymap.set("n", "<leader>gfm", ": !go fmt % <CR>")
 
