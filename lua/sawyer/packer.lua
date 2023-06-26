@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 
   -- Treesitter
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  -- use('nvim-treesitter/playground')
   use("nvim-treesitter/nvim-treesitter-context");
 
   -- Harpoon
@@ -66,6 +67,6 @@ return require('packer').startup(function(use)
   }
 
   -- Auto-Pair
-  use("jiangmiao/auto-pairs")
+  -- use("jiangmiao/auto-pairs")
 
 end)
