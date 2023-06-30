@@ -24,11 +24,5 @@ vim.keymap.set("n", "<leader>gfm", ": !go fmt % <CR>")
 vim.keymap.set({"n", "v"}, "<leader>d", "<nop>")
 vim.keymap.set({"n", "v"}, "<leader>p", "<nop>")
 
+-- go to insert mode
 vim.keymap.set("i", "jk", "<Esc>")
-
-
-
-
-
-
-
