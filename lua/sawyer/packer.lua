@@ -10,7 +10,6 @@ return require('packer').startup(function(use)
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
@@ -19,6 +18,7 @@ return require('packer').startup(function(use)
 
     -- Treesitter
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+
     -- use('nvim-treesitter/playground')
     use("nvim-treesitter/nvim-treesitter-context");
 
@@ -67,12 +67,12 @@ return require('packer').startup(function(use)
     }
 
     -- -- Auto-Pair
-    -- use("jiangmiao/auto-pairs")
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
 
+    -- Status bar
     use {
        "vim-airline/vim-airline"
     }
