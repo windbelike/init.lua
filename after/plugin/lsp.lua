@@ -24,6 +24,7 @@ lsp.ensure_installed({
     'rust_analyzer',
     'lua_ls',
     'gopls',
+    'tailwindcss'
     --    'java_language_server',
 })
 
