@@ -74,6 +74,14 @@ return require('packer').startup(function(use)
 
     -- Status bar
     use {
-       "vim-airline/vim-airline"
+        "vim-airline/vim-airline"
+    }
+
+    -- File tree
+    use {
+        "nvim-tree/nvim-tree.lua",
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
     }
 end)
