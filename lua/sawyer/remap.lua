@@ -8,7 +8,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- not working
--- vim.keymap.set("v", "<leader>p", [["_dP]])
+vim.keymap.set("v", "<leader>p", [["_dP]])
 -- vim.keymap.set("x", "<leader>p", [["_dP]])
 
 vim.keymap.set({"n", "v"}, "Q", "<nop>")
@@ -24,7 +24,6 @@ vim.keymap.set("n", "<leader>gfm", ": !go fmt % <CR>")
 
 -- ignore 
 vim.keymap.set({"n", "v"}, "<leader>d", "<nop>")
-vim.keymap.set({"n", "v"}, "<leader>p", "<nop>")
 
 -- go to insert mode
 vim.keymap.set("i", "jk", "<Esc>")
