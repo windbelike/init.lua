@@ -20,6 +20,7 @@ lsp.preset({
 })
 
 lsp.ensure_installed({
+    'jsonls',
     'tsserver',
     'rust_analyzer',
     'lua_ls',
