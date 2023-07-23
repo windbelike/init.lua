@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
     -- use('nvim-treesitter/playground')
-    use("nvim-treesitter/nvim-treesitter-context");
+    -- use("nvim-treesitter/nvim-treesitter-context");
 
     -- Harpoon
     use('theprimeagen/harpoon')
@@ -70,7 +70,7 @@ return require('packer').startup(function(use)
         end
     }
 
-    -- -- Auto-Pair
+    -- Auto-Pair
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
@@ -86,10 +86,10 @@ return require('packer').startup(function(use)
     }
 
     -- File tree
-    -- use {
-    --     "nvim-tree/nvim-tree.lua",
-    --     requires = {
-    --         'nvim-tree/nvim-web-devicons', -- optional
-    --     },
-    -- }
+    use {
+        "nvim-tree/nvim-tree.lua",
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
 end)
