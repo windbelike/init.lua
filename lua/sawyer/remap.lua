@@ -27,3 +27,7 @@ vim.keymap.set({"n", "v"}, "<leader>d", "<nop>")
 
 -- go to insert mode
 vim.keymap.set("i", "jk", "<Esc>")
+
+-- quick fix
+vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")

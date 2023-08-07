@@ -7,7 +7,7 @@ lsp.preset({
     setup_servers_on_start = true,
     set_lsp_keymaps = {
         preserve_mappings = false,
-        omit = {'gi'}, -- ignore gi remap bindings
+        omit = { 'gi', '<C-k>' }, -- ignore gi remap bindings
     },
     manage_nvim_cmp = {
         set_sources = 'recommended',
@@ -62,7 +62,7 @@ lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
 
     -- default configs:
-    -- gd: go to definition 
+    -- gd: go to definition
     -- gi: go to implementations
     -- gr: go to references
     -- gl: show error info in float window
