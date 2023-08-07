@@ -76,6 +76,7 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
+    -- jsx tag closing
     use {
         'windwp/nvim-ts-autotag',
         branch = 'main',
@@ -103,4 +104,7 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         },
     }
+
+    -- jsx/tsx indent
+    use("maxmellon/vim-jsx-pretty")
 end)
