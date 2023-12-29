@@ -76,27 +76,6 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
-    -- jsx tag closing
-    -- use {
-    --     'windwp/nvim-ts-autotag',
-    --     branch = 'main',
-    --     requires = {
-    --         'nvim-treesitter/nvim-treesitter',
-    --     },
-    --     config = function()
-    --         require('nvim-ts-autotag').setup()
-    --     end
-    -- }
-
-    -- Status bar
-    -- use {
-    --     "vim-airline/vim-airline"
-    -- }
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
-
     -- File tree
     use {
         "nvim-tree/nvim-tree.lua",
@@ -105,6 +84,4 @@ return require('packer').startup(function(use)
         },
     }
 
-    -- jsx/tsx indent
-    use("maxmellon/vim-jsx-pretty")
 end)

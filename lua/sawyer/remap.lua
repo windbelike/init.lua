@@ -8,11 +8,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- not working
-vim.keymap.set("v", "<leader>p", [["_dP]])
--- vim.keymap.set("x", "<leader>p", [["_dP]])
-
-vim.keymap.set({"n", "v"}, "Q", "<nop>")
-vim.keymap.set({"n", "v"}, "q", "<nop>")
+vim.keymap.set({"v", "n"}, "<leader>p", [["_dP]])
 
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 
